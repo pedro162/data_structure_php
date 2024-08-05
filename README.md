@@ -1,4 +1,3 @@
-````markdown
 # # Data Structure using PHP
 
 This project provides implementations of fundamental data structures in PHP, including Queues, Stacks, Trees, and Binary Search Trees (BST). Each data structure is implemented with essential operations and example usage.
@@ -26,7 +25,6 @@ To use the data structures in this project, clone the repository and include the
 ```bash
 git clone https://github.com/yourusername/data_structure_php.git
 ```
-````
 
 Include the classes you need in your PHP scripts:
 
