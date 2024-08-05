@@ -23,15 +23,7 @@ The `data_structure_php` project is designed to help developers understand and i
 To use the data structures in this project, clone the repository and include the necessary classes in your PHP project.
 
 ```bash
-git clone https://github.com/yourusername/data_structure_php.git
-```
-
-Include the classes you need in your PHP scripts:
-
-```php
-require_once 'path/to/data_structure_php/Queue.php';
-require_once 'path/to/data_structure_php/Stack.php';
-// Include other structures as needed
+git clone https://github.com/pedro162/data_structure_php.git
 ```
 
 ## Usage
