@@ -52,6 +52,34 @@ class Queue
         return $temp;
     }
 
+    public function getFirst()
+    {
+        return $this->first->getValue();
+    }
+
+    public function getLast()
+    {
+        return $this->last->getValue();
+    }
+
+    public function get($position)
+    {
+        try {
+
+            $temp = $this->first;
+            $counter = 0;
+            while ($counter <= $this->queue_length) {
+                if ($counter == $position) {
+                    return $temp->getValue();
+                }
+                $temp = $temp->getNext();
+                $counter += 1;
+            }
+        } catch (\Exception $ex) {
+        } catch (\Error $ex) {
+        }
+    }
+
     public function print()
     {
         print('====================== LIST ======================<br/>');

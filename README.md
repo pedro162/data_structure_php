@@ -8,6 +8,7 @@ This project provides implementations of fundamental data structures in PHP, inc
 - [Installation](#installation)
 - [Usage](#usage)
   - [Queue](#queue)
+  - [Linked-List](#linked-list)
   - [Stack](#stack)
   - [Tree](#tree)
   - [Binary Search Tree (BST)](#binary-search-tree-bst)
@@ -47,6 +48,29 @@ $queue->enqueue(10);
 $queue->enqueue(20);
 $queue->enqueue(30);
 echo $queue->dequeue(); // Outputs: 10
+```
+
+### Linked-List
+
+A **Linked-List** is a data structure that stores a sequence of elements. Each element in the list is called a node, and each node has a reference to the next node in the list. The first node in the list is called the head, and the last node in the list is called the tail.
+
+**Common Operations:**
+
+- `append($element)`: Add an element to the back of the linked-list.
+- `prepend($element)`: Add an element to the head of the linked-list.
+- `insert($index, $element)`: Add an element to the specified position of the linked-list.
+- `removeFirst()`: Remove and return the front element of the linked-list.
+- `removeLast()`: Remove and return the back element of the linked-list.
+- `isEmpty()`: Check if the linked-list is empty.
+
+**Example:**
+
+```php
+$linkedList = new LinkedList();
+$linkedList->append(10);
+$linkedList->append(20);
+$linkedList->append(30);
+echo $linkedList->removeLast(); // Outputs: 30
 ```
 
 ### Stack
