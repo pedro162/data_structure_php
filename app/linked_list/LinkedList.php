@@ -126,6 +126,28 @@ class LinkedList
         $temp;
     }
 
+    public function remove($index)
+    {
+        if (!($this->length() > 0 && $this->length() >= $index)) {
+            return null;
+        }
+
+        if ($index == 0 || $index == 1) {
+            return $this->removeFirst();
+        }
+
+        if ($index == $this->length() - 1) {
+            return $this->removeLast();
+        }
+
+        $prev = $this->get($index - 1);
+        $temp = $prev->getNext();
+        $prev->next($temp->getNext());
+        $temp->next(null);
+        $this->length--;
+        return $temp;
+    }
+
     public function insert($index, $value)
     {
         if ($this->length == 0) {
@@ -146,6 +168,18 @@ class LinkedList
     public function isEmpty()
     {
         return $this->length > 0;
+    }
+
+    public function length()
+    {
+        return $this->length;
+    }
+
+    public function makeEmpty()
+    {
+        $this->head = null;
+        $this->tail = null;
+        $this->length = 0;
     }
 
     public function set($index, $value)
