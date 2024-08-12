@@ -57,6 +57,11 @@ class Queue
         return $this->first->getValue();
     }
 
+    public function peek()
+    {
+        return $this->first->getValue();
+    }
+
     public function getLast()
     {
         return $this->last->getValue();
@@ -78,6 +83,11 @@ class Queue
         } catch (\Exception $ex) {
         } catch (\Error $ex) {
         }
+    }
+
+    public function isEmpty()
+    {
+        return $this->queue_length > 0;
     }
 
     public function print()
