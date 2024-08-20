@@ -3,6 +3,7 @@
 use app\linked_list\LinkedList;
 use app\queue\Queue;
 use app\stack\Stack;
+use app\tree\Tree;
 
 require_once __DIR__ . '/../bootstrap/ApplicationLoader.php';
 
@@ -77,5 +78,15 @@ $stack->print();
 echo 'height: ' . $stack->height() . '<br/>';
 
 //----------------------- TREE --------------------------
+echo '================ TREE ============================<br/>';
+
+$tree = new Tree();
+for ($i = 1; $i <= 15; $i++) {
+    $tree->insert($i);
+}
+echo 'Root value: ' . $tree->getRoot()->getValue() . '<br/>';
+echo 'Root left value: ' . $tree->getRoot()->getLeft()->getValue() . '<br/>';
+echo 'Root right value: ' . $tree->getRoot()->getRight()->getValue() . '<br/>';
+$tree->BFS();
 
 //----------------------- BST TREE --------------------------

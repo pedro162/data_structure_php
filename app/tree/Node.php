@@ -8,7 +8,7 @@ class Node
     protected $right;
     protected $left;
 
-    public function  __construct(string $data)
+    public function  __construct($data)
     {
         $this->value = $data;
     }
@@ -16,6 +16,27 @@ class Node
     public function getValue()
     {
         return $this->value;
+    }
+
+    public function left($left)
+    {
+        $this->left = $left;
+        return $this;
+    }
+
+    public function getLeft()
+    {
+        return $this->left;
+    }
+
+    public function getRight()
+    {
+        return $this->right;
+    }
+    public function right($right)
+    {
+        $this->right = $right;
+        return $this;
     }
 
     public function isLeaf()

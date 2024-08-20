@@ -5,10 +5,10 @@ namespace app\queue;
 
 class Node
 {
-    protected string $value;
+    protected $value;
     protected $next;
 
-    public function  __construct(string $data)
+    public function  __construct($data)
     {
         $this->value = $data;
     }

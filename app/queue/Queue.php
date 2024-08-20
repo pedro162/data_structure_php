@@ -11,7 +11,7 @@ class Queue
     protected $last;
     protected int $queue_length = 0;
 
-    public function __construct(string $value)
+    public function __construct($value)
     {
         $newNode = new Node($value);
         $this->first = $newNode;
@@ -19,7 +19,7 @@ class Queue
         $this->queue_length += 1;
     }
 
-    public function enqueue(string $value)
+    public function enqueue($value)
     {
         $newNode = new Node($value);
         if ($this->queue_length == 0) {
@@ -88,6 +88,11 @@ class Queue
     public function isEmpty()
     {
         return $this->queue_length > 0;
+    }
+
+    public function getLength()
+    {
+        return $this->queue_length;
     }
 
     public function print()
