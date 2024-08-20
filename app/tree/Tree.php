@@ -15,7 +15,7 @@ class Tree
         return $this->root;
     }
 
-    public function insert($value): void
+    public function addNode($value): void
     {
         try {
             if ($this->root == null) $this->root = new Node($value);

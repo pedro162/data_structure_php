@@ -82,7 +82,7 @@ echo '================ TREE ============================<br/>';
 
 $tree = new Tree();
 for ($i = 1; $i <= 15; $i++) {
-    $tree->insert($i);
+    $tree->addNode($i);
 }
 echo 'Root value: ' . $tree->getRoot()->getValue() . '<br/>';
 echo 'Root left value: ' . $tree->getRoot()->getLeft()->getValue() . '<br/>';
